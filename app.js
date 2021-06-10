@@ -41,6 +41,7 @@ app.use(bodyParser.json());
 // })
 
 // app.use('/', router)
+console.log('test conflict');
 
 app.listen(5000, () => {
     console.log('listen');
