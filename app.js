@@ -8,7 +8,7 @@ dotenv.config();
 
 // const router = require('./routes/api');
 // hi miri
-
+console.log("yugf")
 const connectionParams = {
     useNewUrlParser: true,
     useCreateIndex: true,
