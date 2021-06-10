@@ -8,7 +8,7 @@ dotenv.config();
 
 // const router = require('./routes/api');
 
-
+console.log("konflict")
 const connectionParams = {
     useNewUrlParser: true,
     useCreateIndex: true,
