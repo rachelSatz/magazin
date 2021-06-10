@@ -7,8 +7,10 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // const router = require('./routes/api');
+// hi rachel
+console.log("konflict")
 // hi miri
-
+console.log("yugf")
 const connectionParams = {
     useNewUrlParser: true,
     useCreateIndex: true,
