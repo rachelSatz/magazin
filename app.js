@@ -9,6 +9,8 @@ dotenv.config();
 // const router = require('./routes/api');
 // hi rachel
 console.log("konflict")
+// hi miri
+console.log("yugf")
 const connectionParams = {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -41,6 +43,7 @@ app.use(bodyParser.json());
 // })
 
 // app.use('/', router)
+console.log('test conflict');
 
 app.listen(5000, () => {
     console.log('listen');

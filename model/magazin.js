@@ -6,11 +6,9 @@ const MagazinSchema = mongoose.Schema({
     },
     
     date: {
-        type: String
+        type: Date
     },
     images:{},
-
-
     posts: [
         { type: mongoose.Types.ObjectId, ref: 'Post' }
     ]
