@@ -8,7 +8,9 @@ const MagazinSchema = mongoose.Schema({
     date: {
         type: Date
     },
-    images:{},
+    images:{
+        type: Image
+    },
     posts: [
         { type: mongoose.Types.ObjectId, ref: 'Post' }
     ]
