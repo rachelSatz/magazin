@@ -4,11 +4,11 @@ const MagazinSchema = mongoose.Schema({
     name: {
         type: String
     },
-    
+
     date: {
-        type: Date
+        type: Date, default: Date.now
     },
-    images:{},
+    images: {},
     posts: [
         { type: mongoose.Types.ObjectId, ref: 'Post' }
     ]

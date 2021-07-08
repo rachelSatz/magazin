@@ -1,4 +1,5 @@
 const User = require('../model/user');
+const Magazin = require('../model/magazin');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -8,8 +9,10 @@ const register = async (req, res) => {
     const newUser = new User(req.body)
     try {
         const user = await newUser.save()
-        res.json({ status: 200, user: user })
+        const magazin = await new Magazin({ name: "new magazin" })
+        res.json({ status: 200, user: user, magazin: magazin })
         console.log('succes');
+
     } catch (err) {
         console.log(err)
         res.status(400).send(err.message)
@@ -30,6 +33,7 @@ const login = async (req, res) => {
             );
             res.status(200).json({ token: token, user: cheackSign.email });
             console.log('token succses');
+
         }
     }
     catch (err) { res.status(400).send(err.message) }
