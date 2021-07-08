@@ -5,12 +5,9 @@ const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 dotenv.config();
+const router = require('./routes/api');
 
-// const router = require('./routes/api');
-// hi rachel
-console.log("konflict")
-// hi miri
-console.log("yugf")
+
 const connectionParams = {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -42,7 +39,8 @@ app.use(bodyParser.json());
 //         next()
 // })
 
-// app.use('/', router)
+app.use('/', router)
+
 console.log('test conflict');
 
 app.listen(5000, () => {
