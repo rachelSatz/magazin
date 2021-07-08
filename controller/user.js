@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 dotenv.config();
 
+// test
 // function register user
 const register = async (req, res) => {
     const newUser = new User(req.body)
