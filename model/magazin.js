@@ -4,9 +4,9 @@ const MagazinSchema = mongoose.Schema({
     name: {
         type: String
     },
-    
+
     date: {
-        type: Date
+        type: Date, default: Date.now
     },
     images:{type:Image},
     posts: [
