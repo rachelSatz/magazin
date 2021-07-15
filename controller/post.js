@@ -13,20 +13,21 @@ const addPost=async(req,res)=>{
         res.status(200).send(post)
     } catch (err) {
         console.log(err)
-        res.status(400).send("ghhg"+err.message)
+        res.status(400).send("לא הצליח ליצור"+err.message)
     }
 }
 const updatePost=async(req,res)=>{
-    const newPost=new Post(req.body);
-    try {
-        const post = await newPost.save();
-        await Magazin.findByIdAndUpdate({ _id: req.body.idMagazin }, { $push: { 'Post': post._id } })
-    } catch (err) {
+    try{
+    await Post.findByIdAndUpdate({ _id: req.params.id },req.body);
+    console.log("מצאתי");
+     res.status(200).send("השתנה בהצלחה")}
+     catch{
         console.log(err)
-        res.status(400).send(err.message)
-    }
+        res.status(400).send("לא הצליח לעדכן"+err.message)
+     }
+     
 }
 const deletePost=async(req,res)=>{
 
 }
-module.exports={addPost}
+module.exports={addPost,updatePost}
