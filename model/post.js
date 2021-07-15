@@ -5,14 +5,13 @@ const PostSchema = mongoose.Schema({
         type:String
     },
     image:{
-        type:Image
+        type:String
     },
     descreption:{
         type:String
     },
-    idMagazin:{
-         type:mongoose.Types.ObjectId,ref="magazin"
-    }
+    idMagazin:
+        { type: mongoose.Types.ObjectId, ref: 'Magazin' }
 })
 
 module.exports = mongoose.model('Post', PostSchema);
