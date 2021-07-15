@@ -21,13 +21,13 @@ const register = async (req, res) => {
         const post1 = await new Post({
             headLine: "title example 1",
             image: "https://pixabay.com/get/g0fb58abe01f83ec4e7b1be235aef5a7fadd7624f466f149606075dade129d9be43a1f4ce1d0f863fa2f060d2a065fee3_1920.jpg",
-            body: "body example 1",
+            descreption: "body example 1",
             idMagazin: magazin._id
         }).save();
         const post2 = await new Post({
             headLine: "title example 1",
             image: "https://pixabay.com/get/g2f73d13c3817a9c2a37f695cdd17a76f446d7e355a3e857e130093a4eacce5610d415f5c8c1166b7d271affccadb9e94_1920.jpg",
-            body: "body example 1",
+            descreption: "body example 1",
             idMagazin: magazin._id
         }).save();
         await Magazin.findByIdAndUpdate({ _id: magazin._id }, { $push: { 'posts': [post1._id, post2._id] } });

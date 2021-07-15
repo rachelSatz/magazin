@@ -7,7 +7,7 @@ const PostSchema = mongoose.Schema({
     image: {
         type: String
     },
-    body: {
+    descreption: {
         type: String
     },
     idMagazin: {
