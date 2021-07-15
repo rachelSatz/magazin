@@ -1,14 +1,17 @@
 const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
-    headLine:{
-        type:String
+    headLine: {
+        type: String
     },
-    image:{
-        type:Image
+    image: {
+        type: String
     },
-    body:{
-        type:String
+    body: {
+        type: String
+    },
+    idMagazin: {
+        type: mongoose.Types.ObjectId, ref: 'Magazin'
     }
 })
 

@@ -11,7 +11,7 @@ const UserSchema = mongoose.Schema({
         type: String
     },
    
-    Magazins: [
+    magazins: [
         { type: mongoose.Types.ObjectId, ref: 'Magazin' }
     ]
 })
