@@ -8,7 +8,13 @@ const MagazinSchema = mongoose.Schema({
     date: {
         type: Date, default: Date.now
     },
+<<<<<<< HEAD
     images:{type:String},
+=======
+    images:{
+        type: Image
+    },
+>>>>>>> rachellsatz
     posts: [
         { type: mongoose.Types.ObjectId, ref: 'Post' }
     ]
