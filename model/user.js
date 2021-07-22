@@ -5,13 +5,13 @@ const UserSchema = mongoose.Schema({
         type: String
     },
     password: {
-        type: Number
+        type: String
     },
     email: {
         type: String
     },
    
-    Magazins: [
+    magazins: [
         { type: mongoose.Types.ObjectId, ref: 'Magazin' }
     ]
 })
