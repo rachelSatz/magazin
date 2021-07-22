@@ -5,7 +5,7 @@ const PostSchema = mongoose.Schema({
         type: String
     },
     image: {
-      //  type: Image
+        type: String
     },
     descreption: {
         type: String

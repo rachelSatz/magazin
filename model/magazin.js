@@ -12,9 +12,15 @@ const MagazinSchema = mongoose.Schema({
         type: mongoose.Types.ObjectId, ref: 'User'
     },
     // images:{type:Image},
+    images: {
+        type: String
+    },
     posts: [
         { type: mongoose.Types.ObjectId, ref: 'Post' }
-    ]
+    ],
+    userId: {
+        type: mongoose.Types.ObjectId, ref: 'User'
+    }
 })
 
 module.exports = mongoose.model('Magazin', MagazinSchema);
